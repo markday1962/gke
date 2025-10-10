@@ -21,7 +21,7 @@ gcloud compute instances create test-instance-2 --zone=europe-west1a
 ```
 ```
 gcloud compute machine-types list
-gcloud compute machine-types list --filter="name:c4-" --filter="name:c4- AND zone:(europe-west1-b OR europe-west1-c OR europe-west1-d)"
+gcloud compute machine-types list --filter="name:c4-" --filter="name:c4- AND zone:(europe-west1-a OR europe-west1-b)"
 gcloud compute instances create test-instance-3 --zone=europe-west1a \
 --machine-type=e2-standard
 ```
