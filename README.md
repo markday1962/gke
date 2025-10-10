@@ -30,7 +30,24 @@ gcloud compute instances create test-instance-4 --zone=eu-west1a \
 --machine-type=e2-standard \
 --boot-disk-types=ssd --boot-disk-size=100
 ```
-
+```
+gcloud compute instances create test-instance-5 --zone=eu-west1a \
+--machine-type=e2-standard \
+--boot-disk-types=ssd --boot-disk-size=100 \
+--labels=k0=v0,k1=v1
+gcloud compute instances list --zone=eu-west1a \
+--filter='labels.k0:v0'
+```
+```
+gcloud compute instances describe
+gcloud compute instances describe test-instance-1 --zone=eu-west1a \
+--format='default(labels)'
+```
+```
+gcloud compute instances stop test-instance-1
+gcloud compute instances start test-instance-1
+gcloud compute instances delete test-instance-1 test-instance-2 test-instance-3 test-instance-4 test-instance-5
+```
 
 
 
