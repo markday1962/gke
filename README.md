@@ -4,7 +4,9 @@ General GKE repo for learning.
 ## Usefull Commands
 
 ### Compute
+```
 gcloud compute project describe
+```
 
 #### Instances
 ```
