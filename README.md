@@ -49,5 +49,12 @@ gcloud compute instances start test-instance-1
 gcloud compute instances delete test-instance-1 test-instance-2 test-instance-3 test-instance-4 test-instance-5
 ```
 
+### Cloud Storage
+
+#### Object Storage
+```
+gcloud storage buckets create gs://markday-test-bucket-1 --location=EU-WEST-1\
+--default-storage-class=STANDARD
+```
 
 
