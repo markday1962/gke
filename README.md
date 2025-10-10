@@ -17,21 +17,22 @@ gcloud compute instances list
 ```
 gcloud compute instances create test-instance-1 # If no zone specified takes the information from the project
 gcloud compute zones list
-gcloud compute instances create test-instance-2 --zone=eu-west1a
+gcloud compute instances create test-instance-2 --zone=europe-west1a
 ```
 ```
 gcloud compute machine-types list
-gcloud compute instances create test-instance-3 --zone=eu-west1a \
+gcloud compute machine-types list --filter="name:c4-" --filter="name:c4- AND zone:(europe-west1-b OR europe-west1-c OR europe-west1-d)"
+gcloud compute instances create test-instance-3 --zone=europe-west1a \
 --machine-type=e2-standard
 ```
 ```
 gcloud compute disk-types list
-gcloud compute instances create test-instance-4 --zone=eu-west1a \
+gcloud compute instances create test-instance-4 --zone=europe-west1a \
 --machine-type=e2-standard \
 --boot-disk-types=ssd --boot-disk-size=100
 ```
 ```
-gcloud compute instances create test-instance-5 --zone=eu-west1a \
+gcloud compute instances create test-instance-5 --zone=europe-west1a \
 --machine-type=e2-standard \
 --boot-disk-types=ssd --boot-disk-size=100 \
 --labels=k0=v0,k1=v1
@@ -40,7 +41,7 @@ gcloud compute instances list --zone=eu-west1a \
 ```
 ```
 gcloud compute instances describe
-gcloud compute instances describe test-instance-1 --zone=eu-west1a \
+gcloud compute instances describe test-instance-1 --zone=europe-west1a \
 --format='default(labels)'
 ```
 ```
